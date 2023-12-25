@@ -1,0 +1,17 @@
+__pycache__/
+.vscode/
+.idea/ls
+*.manifest
+*.spec
+.hypothesis/
+.pytest_cache/
+*.mo
+*.pot
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+__pypackages__/
+.env
+.venv
+env/

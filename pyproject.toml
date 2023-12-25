@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "renovels"
+version = "0.1.0"
+description = ""
+authors = ["neytirri <129419810+neytirri@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.104.1"
+uvicorn = "^0.24.0.post1"
+sqlalchemy = "^2.0.23"
+pydantic-settings = "^2.1.0"
+greenlet = "^3.0.1"
+psycopg = "^3.1.13"
+psycopg-binary = "^3.1.13"
+pytest = "^7.4.3"
+httpx = "^0.25.2"
+python-multipart = "^0.0.6"
+boto3 = "^1.33.11"
+gunicorn = "^21.2.0"
+argon2-cffi = "^23.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
