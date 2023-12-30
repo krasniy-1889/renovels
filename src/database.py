@@ -1,25 +1,18 @@
-from sqlalchemy import create_engine
-from sqlalchemy.ext.asyncio import create_async_engine
-from sqlalchemy.orm import DeclarativeBase, sessionmaker
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
+from sqlalchemy.orm import DeclarativeBase
 
-from config import settings
-
-sync_engine = create_engine(
-    url=settings.DB_URL_psycopg,
-    echo=True,
-    pool_size=10,
-    max_overflow=10,
-)
-
-async_engine = create_async_engine(
-    url=settings.DB_URL_psycopg,
-    echo=True,
-    pool_size=10,
-    max_overflow=10,
-)
-
-session_factory = sessionmaker(sync_engine)
+from src.config import settings
 
 
 class Base(DeclarativeBase):
     pass
+
+
+engine = create_async_engine(
+    url=settings.DB_URL_psycopg,
+    echo=True,
+    pool_size=10,
+    max_overflow=10,
+)
+
+async_session_maker = async_sessionmaker(engine)
